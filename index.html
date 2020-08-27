@@ -1,8 +1,20 @@
+<!DOCTYPE html>
 <html>
   <head>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <title>Jas World</title>
-    <style type="text/css">
+    <title>Just World</title>
+    <style>
+      @font-face{
+        font-family: Roboto;
+        src: url('font/Roboto-Light.ttf');
+      }
+      @font-face{
+        font-family: Raleway;
+        src: url('font/Raleway-SemiBold.ttf');
+      }
+      @font-face{
+        font-family: Oswald;
+        src: url('font/Oswald-Regular.ttf');
+      }
       body{
         margin-left: 0px;
         margin-right: 0px;
@@ -12,56 +24,102 @@
       }
       header{
         width: 100%;
-        height: 8%;
+        height: 43px;
         background-color: #FFFFFF;
+        padding: 10px;
       }
-      #profile_table{
-        table-layout: fixed;
-        border: 1px solid;
-        border-color: black;
-        margin-right:  0px;
-      }
-      #desc_table{
+      .profile_table{
         float: left;
-        float: right;
-        border: 1px solid;
-        border-color: black;
+        margin-top: 35px;
+        margin-right: 0px;
+        margin-left: 145px;
+        background-color: white;
+      }
+      .desc_table{
+        float: left;
+        margin-top: 35px;
+        margin-left: 75px;
+        width: 865px;
+        background-color: white;
+      }
+      .about_me{
+        font-family: Oswald;
+        position: relative;
+        margin: 0px;
+        font-size: 25px;
+        margin-left: 45px;
+      }
+      .profile{
+        font-family: Raleway;
+        font-size: 35px;
+        position: relative;
+        margin: 0px;
+      }
+      .description{
+        font-family: Raleway;
+        font-size: 35px;
+        position: relative;
+        margin: 0px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        height: 50px;
+      }
+      td.question{
+        font-family: Raleway;
+        padding-left: 18px;
+        font-size: 20px;
+      }
+      td.answer{
+        font-family: Roboto;
+        padding-left: 13px;
+        font-size: 18px;
+      }
+      .content{
+        font-family: Roboto;
+        padding-top: 0px;
+        font-size: 18px;
+        height: 100px;
+      }
+      tr.profile_desc{
+        height: 40px;
       }
     </style>
+    <script src="https://kit.fontawesome.com/3b23dca747.js" crossorigin="anonymous"></script>
   </head>
   <body>
       <!---This is the header section--->
 
       <header>
-        <p>About me: Jasffer</p>
+        <p class="about_me"><i class="far fa-user-circle" style="margin-right: 10px;"></i>About me: Jasffer</p>
       </header>
 
 
       <!---This is the profile section--->
-      <table id="profile_table">
+      <table class="profile_table">
         <tr>
-          <td colspan="2" align="center">profile</td>
+          <!---fonts is oswald for the bigger texts or passion and roboto for small texts-->
+          <td colspan="2" align="center" style="padding-top: 5px; padding-bottom: 5px;"><p class="profile">Profile</p></td>
         </tr>
         <tr>
-          <td colspan="2" align="center"><img src="profile.jpg"/></td>
+          <td colspan="2" align="center"><img src="profile.jpg" width="335px" height="500px"/></td>
         </tr>
-        <tr>
-          <td>
-            name:
+        <tr class="profile_desc">
+          <td class="question">
+            Name:
           </td>
-          <td>Jasffer T. Padigdig</td>
+          <td class="answer">Jasffer T. Padigdig</td>
         </tr>
-        <tr>
-          <td>
+        <tr class="profile_desc">
+          <td class="question">
             Birthdate:
           </td>
-          <td>
+          <td class="answer">
             May 30, 2001
           </td>
         </tr>
-        <tr>
-          <td>Location:</td>
-          <td>Quezon city Metro Manila</td>
+        <tr class="profile_desc">
+          <td class='question'>Location:</td>
+          <td class="answer">Quezon city Metro Manila</td>
         </tr>
         <tr>
 
@@ -69,14 +127,17 @@
       </table>
 
       <!---this is the prfile description section--->
-      <table id="desc_table">
+      <table class="desc_table">
         <tr>
-          <td>Description</td>
+          <td class="description">Description</td>
         </tr>
-        <tr>
-          <td>Hello I'm Jasffer T. Padigdig and i'm from Quezon city.
-              I don't have any ideas regarding user design however, i think i'm going to enjoy and learn alot from this class.
-              I had this trello account when it was my first year in senior high and the only time i really got to use this account was when it was first introduced to us and now, i never really got a chance to use this account that much. I like reading, m favorite book right now is the city and the stars by arthur clarke, i also like watching any shows or dramas as long as it's interesting for me, as of now i just finished watching a k-drama series IOTNBO.</td>
+        <tr style="padding-top: 0px;">
+          <td class="content">
+            Hello I'm Jasffer T. Padigdig and i'm from Quezon city.
+            I don't have any ideas regarding user design however, i think i'm going to enjoy and learn alot from this class.
+            I had this trello account when it was my first year in senior high and the only time i really got to use this account was when it was first introduced to us and now,
+            i never really got a chance to use this account that much. I like reading, m favorite book right now is the city and the stars by arthur clarke,
+            i also like watching any shows or dramas as long as it's interesting for me, as of now i just finished watching a k-drama series IOTNBO.</td>
         </tr>
       </table>
   </body>
